@@ -5,9 +5,9 @@ export default {
 
 function scrollFunction() {
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById('header').style.fontSize = '30px';
+    document.getElementById('header-logo').style.width = '300px';
   } else {
-    document.getElementById('header').style.fontSize = '50px';
+    document.getElementById('header-logo').style.width = '450px';
   }
 }
   },

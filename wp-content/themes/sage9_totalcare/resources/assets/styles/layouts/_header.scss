@@ -5,3 +5,15 @@
 .banner .nav a {
   @extend .nav-link;
 }
+
+#header {
+  padding: 50px 10px;
+  color: black;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.2s;
+}

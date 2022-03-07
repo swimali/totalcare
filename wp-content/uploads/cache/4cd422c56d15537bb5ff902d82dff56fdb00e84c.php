@@ -3,7 +3,7 @@
   <?php echo $__env->make('partials.head', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
   <body <?php body_class() ?>>
     <?php do_action('get_header') ?>
-    <!-- <?php echo $__env->make('partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?> -->
+    <?php echo $__env->make('partials.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
     <div class="wrap container-fluid p-0" role="document">
       <div class="content">
         <main class="main">

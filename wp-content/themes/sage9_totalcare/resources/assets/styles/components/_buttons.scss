@@ -1,0 +1,30 @@
+.home-banner {
+  .button-group {
+    position: absolute;
+    bottom: 0;
+
+    .yellow-button {
+      background-color: #fcd20d;
+      text-transform: uppercase;
+      width: 290px;
+      height: 103px;
+      font-size: 24px;
+      border-radius: 0;
+    }
+
+    .right {
+      margin-left: auto;
+    }
+
+    .button-icon {
+      background-color: #329fb9;
+      width: 108px;
+      display: flex;
+      justify-content: center;
+
+      .button-image {
+        width: 55px;
+      }
+    }
+  }
+}

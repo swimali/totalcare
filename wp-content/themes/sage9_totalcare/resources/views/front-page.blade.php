@@ -8,4 +8,6 @@
     @include('partials.content-'.get_post_type())
   @endwhile
 
+  
+
 @endsection

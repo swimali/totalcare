@@ -8,6 +8,6 @@
         <span></span>
       </div>
     </div>  
-    <img id="header-logo" class="header-logo" src="@asset('images/total-care-logo.png')" alt="Total Care Logo">
+    <a href="/home"><img id="header-logo" class="header-logo" src="@asset('images/total-care-logo.png')" alt="Total Care Logo"></a>
   </nav>
 </header>

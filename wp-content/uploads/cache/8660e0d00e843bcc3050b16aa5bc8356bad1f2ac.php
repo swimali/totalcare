@@ -9,4 +9,13 @@ if ( !empty( $image ) ) { ?>
             <h1><?php the_field('banner_caption'); ?></h1>
         </div>    
     </div>
+    <div class="button-group px-6 w-100">
+        <div class="d-flex">
+            <a class="button-icon" href="#"><img class="button-image" src="<?= App\asset_path('images/message.svg'); ?>"></a>
+            <button type="button" class="btn yellow-button font-dark-blue">Book now</button>
+        
+            <button type="button" class="btn yellow-button font-dark-blue right flex-end">Gym membership</button>
+            <a class="button-icon" href="#"><img class="button-image" src="<?= App\asset_path('images/calendar.svg'); ?>"></a>    
+        </div>
+    </div>
 </div>

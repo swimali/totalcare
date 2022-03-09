@@ -1,13 +1,30 @@
 @extends('layouts.app')
 
-@section('content')
-
 @include('partials.banner')
 
-  @while (have_posts()) @php the_post() @endphp
-    @include('partials.content-'.get_post_type())
-  @endwhile
+@section('content')
 
-  
+<div class="grey-section px-6">
+  <div class="row no-gutters">
+    <div class="col-md-7">
+      <?php the_field('description'); ?>
+    </div>
+  </div>
+
+  <div class="carousel-section spacer">
+    <div class="autoplay">
+        <div class="item">
+          1
+        </div>  
+        <div class="item">
+          2
+        </div>  
+        <div class="item">
+          3
+        </div>
+    </div> 
+  </div>
+
+</div>
 
 @endsection

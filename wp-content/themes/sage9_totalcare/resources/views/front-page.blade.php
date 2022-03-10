@@ -71,7 +71,7 @@
   </div>
 </div>
 
-<div class="container white-section spacer">
+<div class="container white-section blog-spacer">
 <?php 
     if( have_rows('white_section') ):
     while( have_rows('white_section') ) : the_row(); ?>
@@ -86,7 +86,7 @@
     ?>
     
       <div class="col-md-3">
-        <img class="image w-100" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_url( $image['alt'] ); ?>" />
+        <img class="w-100" src="<?php echo esc_url( $image['url'] ); ?>" alt="<?php echo esc_url( $image['alt'] ); ?>" />
       </div>
 
     <?php endwhile;
@@ -96,6 +96,42 @@
     <?php endwhile;
   endif; ?>  
 </div> 
+
+<div class="news-section px-6">
+  <div class="row">
+    <div class="col-md-6 spacer background-dark-blue">
+        <table class="table">
+          <div class="heading-news">
+            <h1>Latest News</h1>
+          </div>
+          <?php 
+            $the_query = new WP_Query( array(
+              'posts_per_page' => 3,
+            )); 
+          ?>
+          <?php if ( $the_query->have_posts() ) :  ?>
+          <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+
+            <tr>
+              <td>  
+                <a class="d-flex" href="{{ get_permalink() }}"><?php echo get_the_date( get_option('date_format') ); ?>
+                <img class="pl-20" src="@asset('images/arrow-icon.svg')" alt="Total Care Arrow Icon">
+                </a>
+                @php the_excerpt() @endphp
+              </td>  
+            </tr>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
+        </table>
+        <div class="text-center pt-5">
+          <button class="btn white-button" type="button">read more</button>
+        </div>
+    </div>  
+    <div class="col-md-6">
+    </div>  
+  </div>  
+</div>  
 
 
 @endsection

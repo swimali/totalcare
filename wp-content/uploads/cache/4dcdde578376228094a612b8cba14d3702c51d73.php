@@ -96,7 +96,7 @@
 </div> 
 
 <div class="news-section px-6">
-  <div class="row">
+  <div class="row no-gutters">
     <div class="col-md-6 spacer background-dark-blue">
         <table class="table">
           <div class="heading-news">
@@ -131,6 +131,7 @@
   </div>  
 </div>  
 
+<?php echo $__env->make('partials.instagram-feed', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 <?php $__env->stopSection(); ?>
 

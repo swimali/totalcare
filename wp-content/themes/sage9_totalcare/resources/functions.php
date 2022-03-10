@@ -90,3 +90,12 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+     
+// Add an ACF options page for blog index pages (Insights and Case Studies)
+
+ if( function_exists('acf_add_options_page') ) {
+
+    acf_add_options_page();
+    acf_add_options_sub_page('FAQ Upload');
+}

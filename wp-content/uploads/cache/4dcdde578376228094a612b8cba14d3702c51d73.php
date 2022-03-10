@@ -98,10 +98,10 @@
 <div class="news-section px-6">
   <div class="row no-gutters">
     <div class="col-md-6 spacer background-dark-blue">
+        <div class="heading-news">
+          <h1>Latest News</h1>
+        </div>
         <table class="table">
-          <div class="heading-news">
-            <h1>Latest News</h1>
-          </div>
           <?php 
             $the_query = new WP_Query( array(
               'posts_per_page' => 3,
@@ -126,7 +126,34 @@
           <button class="btn white-button" type="button">read more</button>
         </div>
     </div>  
-    <div class="col-md-6">
+    <div class="col-md-6 spacer">
+      <div class="heading-faq">
+        <h1 class="font-dark-blue">Frequently Asked Questions</h1>
+      </div>  
+      <div class="faq">
+        <table class="table">
+        <?php
+          if( have_rows('faq_section','option') ):
+          $i = 0;
+          while( have_rows('faq_section','option') ) : the_row(); ?>
+          <?php $i++; ?>
+          <?php if( $i > 6 ): ?>
+          <?php break; ?>
+          <?php endif; ?>
+
+          <tr>
+            <td>
+            <img class="pr-20" src="<?= App\asset_path('images/grey-arrow.svg'); ?>" alt="Total Care Arrow Icon">  
+            <?php the_sub_field('question'); ?></td>
+          </tr>
+
+        <?php endwhile;
+          endif; ?>  
+        </table>
+        <div class="text-center pt-5">
+          <button class="btn yellow-button" type="button">read more</button>
+        </div>
+      </div>
     </div>  
   </div>  
 </div>  

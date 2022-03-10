@@ -136,6 +136,12 @@
     margin-left: auto;
   }
 
+  .heading-faq {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .table {
     width: 60%;
     margin-right: auto;
@@ -159,6 +165,38 @@
 
     .pl-20 {
       padding-left: 20px;
+    }
+  }
+
+  .faq {
+    .table {
+      width: 70%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    .pr-20 {
+      padding-right: 20px;
+    }
+
+    .table td {
+      color: #888;
+      border-top: none;
+      padding: 0;
+      padding-top: 50px;
+
+      p {
+        color: #888;
+      }
+
+      a {
+        color: #329fb9;
+        padding-bottom: 5px;
+      }
+
+      .pl-20 {
+        padding-left: 20px;
+      }
     }
   }
 }
